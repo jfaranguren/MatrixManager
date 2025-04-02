@@ -45,7 +45,7 @@ public class Executable {
 					createEmptyMatrix();
 					break;
 				case 2:
-					System.out.println(matrixController.showAllMatrixes());
+					System.out.println(matrixController.getAllMatrixesInfo());
 					break;
 				case 3:
 					createNumericMatrix();
@@ -63,18 +63,18 @@ public class Executable {
 	}
 
 	public void createEmptyMatrix() {
+		
+		int type, rows, columns;
+		
 		System.out.println("Please select the type of matrix " + "\n (1) Numeric matrix" + "\n (2) String matrix");
-		int type = reader.nextInt();
-		reader.nextLine();
-
+		type = reader.nextInt();
+		
 		System.out.println("Please type the number of rows");
-		int rows = reader.nextInt();
-		reader.nextLine();
+		rows = reader.nextInt();
 
 		System.out.println("Please type the number of columns");
-		int columns = reader.nextInt();
-		reader.nextLine();
-
+		columns = reader.nextInt();
+		
 		System.out.println("New matrix:");
 		System.out.println(matrixController.createEmptyMatrix(type, rows, columns));
 	}
@@ -85,23 +85,19 @@ public class Executable {
 
 		System.out.println("Please type the number of rows");
 		rows = reader.nextInt();
-		reader.nextLine();
-
+		
 		System.out.println("Please type the number of columns");
 		columns = reader.nextInt();
-		reader.nextLine();
-
-		int[][] tmp = new int[rows][columns];
+		
+		int matrixID = matrixController.addNumericMatrix(rows, columns);
 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 				System.out.println("Type the number you want to register in the [" + i + "][" + j + "] position");
 				number = reader.nextInt();
-				reader.nextLine();
-				tmp[i][j] = number;
+				matrixController.modifyCellInNumericMatrix(matrixID, i, j, number);
 			}
 		}
-		matrixController.addNumericMatrix(tmp);
 
 	}
 
