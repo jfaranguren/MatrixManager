@@ -34,6 +34,7 @@ public class Executable {
 							"(2) Show the contents of all matrixes \n" +
 							"(3) Create a Numeric matrix \n" +
 							"(4) Create a String matrix \n" +
+							"(5) Has odd \n" +
 							"(0) To leave the application");
 			option = reader.nextInt();
 
@@ -53,6 +54,9 @@ public class Executable {
 				case 4:
 					creatStringMatrix();
 					break;
+				case 5:
+				    //Add all cases necessary for new requirements
+					break;
 				default:
 					System.out.println("Error, type a valid option");
 
@@ -63,18 +67,18 @@ public class Executable {
 	}
 
 	public void createEmptyMatrix() {
-		
+
 		int type, rows, columns;
-		
+
 		System.out.println("Please select the type of matrix " + "\n (1) Numeric matrix" + "\n (2) String matrix");
 		type = reader.nextInt();
-		
+
 		System.out.println("Please type the number of rows");
 		rows = reader.nextInt();
 
 		System.out.println("Please type the number of columns");
 		columns = reader.nextInt();
-		
+
 		System.out.println("New matrix:");
 		System.out.println(matrixController.createEmptyMatrix(type, rows, columns));
 	}
@@ -85,10 +89,10 @@ public class Executable {
 
 		System.out.println("Please type the number of rows");
 		rows = reader.nextInt();
-		
+
 		System.out.println("Please type the number of columns");
 		columns = reader.nextInt();
-		
+
 		int matrixID = matrixController.addNumericMatrix(rows, columns);
 
 		for (int i = 0; i < rows; i++) {

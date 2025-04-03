@@ -81,7 +81,7 @@ public class Controller {
 	 * @param numMatrix La matriz numerica a imprimir
 	 * @return El contenido de la matriz en formato String
 	 */
-	private String getNumericMatrixInfo(int position) {
+	public String getNumericMatrixInfo(int position) {
 
 		int[][] numMatrix = numericMatrixes.get(position);
 
@@ -167,7 +167,7 @@ public class Controller {
 	}
 
 	// String Matrix (pending)
-	private String printStringMatrix(int position) {
+	public String printStringMatrix(int position) {
 		String print = "Pending";
 
 		return print;
