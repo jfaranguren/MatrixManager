@@ -162,7 +162,7 @@ public class Controller {
 	}
 
 	// String Matrix (Pending)
-	public void addStringMatrix(int rows, int columns) {
+	public int addStringMatrix(int rows, int columns) {
 
 	}
 
