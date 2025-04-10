@@ -162,12 +162,18 @@ public class Controller {
 	}
 
 	// String Matrix (Pending)
-	public void addStringMatrix(String[][] stringMatrix) {
+	public void addStringMatrix(int rows, int columns) {
 
 	}
 
 	// String Matrix (pending)
-	public String printStringMatrix(int position) {
+	public void modifyCellInStringMatrix(int positionInList, int row, int column, String value) {
+
+
+	}
+
+	// String Matrix (pending)
+	public String getStringMatrixInfo(int position) {
 		String print = "Pending";
 
 		return print;
